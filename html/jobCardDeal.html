@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="head">
+	<div class="logTitle">旅游综合治理大数据平台</div>
+	<div class="Select headListleft">
+		<p>全网实时监测</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='feelAlarm.html'">舆情实时预警</li>
+			<li onclick="location.href='index.html'">舆情分析朔源</li>
+			<li onclick="location.href='specificMonitor.html'">特定对象监测</li>
+			<li onclick="location.href='setProperty.html'">舆情属性配置</li>
+		</ul>
+	</div>
+	<div class="Select headListright">
+		<p>联动应急处理</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='sendJobCard.html'">舆情预警派单</li>
+			<li onclick="location.href='jobCardDeal.html'">预警工单处理</li>
+			<li onclick="location.href='jobCardSetRole.html'">工单配置管理</li>
+		</ul>
+	</div>
+	<div class="timeer">
+		<div class="timer"></div>
+		<div class="dater"></div>
+	</div>
+</div>
+
+			<div class="content">
+				<div class="jobCardDeal">
+					<div class="sendTop">
+						<ul class="topLI">
+							<li>
+								<span>预警日期：</span>
+								<input type="text" class="p_myDatePicker" placeholder="日期选择" id="choose" onclick="WdatePicker({el:'choose',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/>
+							</li>							
+							<li>
+								<span>预警等级：</span>
+								<div class="mnSel">
+									<p>全部</p>
+									<i></i>
+									<ul>
+										<li>橙色预警</li>
+										<li>红色预警</li>
+										<li>蓝色预警</li>
+										<li>黄色预警</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<span>工单号：</span>
+								<input type="text" class='jobNum'/>
+							</li>
+							<li>
+								<span>工单优先级：</span>
+								<div class="mnSel">
+									<p>全部</p>
+									<i></i>
+									<ul>
+										<li>高</li>
+										<li>中</li>
+										<li>低</li>
+									</ul>
+								</div>
+							</li>							
+							<li>
+								<span>工单状态：</span>
+								<div class="mnSel fr">
+									<p>全部</p>
+									<i></i>
+									<ul>
+										<li>处理中</li>
+										<li>未处理</li>
+										<li>已完成</li>
+									</ul>
+								</div>
+							</li>
+							<li><button class='but'>查询</button></li>
+						</ul>						
+
+					</div>
+					<div class="jobCardContent">
+						<table class="tableList">
+							<thead class="Thead jobCardThead">
+								<tr>
+									<th>序号</th>
+									<th>舆情预警标题</th>
+									<th>预警时间</th>
+									<th>预警等级</th>
+									<th>工单号</th>
+									<th>优先级</th>
+									<th>工单处理时限</th>
+									<th>状态</th>
+								</tr>
+							</thead>
+							<tbody class="Tbody jobCardTbody">
+								<tr>
+									<td>1</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td><a href="#">1001912730</a></td>
+									<td>高</td>
+									<td>2017-02-27</td>
+									<td>处理中</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td><a href="#">1001912730</a></td>
+									<td>高</td>
+									<td>2017-02-27</td>
+									<td>处理中</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td><a href="#">1001912730</a></td>
+									<td>高</td>
+									<td>2017-02-27</td>
+									<td>处理中</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td><a href="#">1001912730</a></td>
+									<td>高</td>
+									<td>2017-02-27</td>
+									<td>处理中</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td><a href="#">1001912730</a></td>
+									<td>高</td>
+									<td>2017-02-27</td>
+									<td>处理中</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td><a href="#">1001912730</a></td>
+									<td>高</td>
+									<td>2017-02-27</td>
+									<td>处理中</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td><a href="#">1001912730</a></td>
+									<td>高</td>
+									<td>2017-02-27</td>
+									<td>处理中</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td><a href="#">1001912730</a></td>
+									<td>高</td>
+									<td>2017-02-27</td>
+									<td>处理中</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td><a href="#">1001912730</a></td>
+									<td>高</td>
+									<td>2017-02-27</td>
+									<td>处理中</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td><a href="#">1001912730</a></td>
+									<td>高</td>
+									<td>2017-02-27</td>
+									<td>处理中</td>
+								</tr>
+								
+							</tbody>
+						</table>
+						<div class="paging">
+							<ul>
+								<li><i class="iconfont icon-first1"></i></li>
+								<li><</li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li class="active"><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li>></li>
+								<li><i class="iconfont icon-last1"></i></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 图片背景 -->
+		<div class="body-bg">
+		    <img src="../images/bg_body.jpg">
+		</div>		
+	</body>
+	<script src="../Lib/jquery-1.12.4.min.js"></script>
+	<script src="../Lib/public.js"></script>
+	<script src="../Lib/DatePicker/WdatePicker.js"></script>
+</html>
+

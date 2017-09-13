@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+		<link rel="stylesheet" href="../Lib/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="head">
+	<div class="logTitle">旅游综合治理大数据平台</div>
+	<div class="Select headListleft">
+		<p>全网实时监测</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='feelAlarm.html'">舆情实时预警</li>
+			<li onclick="location.href='index.html'">舆情分析朔源</li>
+			<li onclick="location.href='specificMonitor.html'">特定对象监测</li>
+			<li onclick="location.href='setProperty.html'">舆情属性配置</li>
+		</ul>
+	</div>
+	<div class="Select headListright">
+		<p>联动应急处理</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='sendJobCard.html'">舆情预警派单</li>
+			<li onclick="location.href='jobCardDeal.html'">预警工单处理</li>
+			<li onclick="location.href='jobCardSetRole.html'">工单配置管理</li>
+		</ul>
+	</div>
+	<div class="timeer">
+		<div class="timer"></div>
+		<div class="dater"></div>
+	</div>
+</div>
+
+			<div class="content">
+				<div class="contentList jobSetTop">
+					<div class="topLeft mr10 active" onclick="location.href='jobCardSetUser.html'">用户管理</div>
+					<div class="topMid mr10" onclick="location.href='jobCardSetDepartment.html'">部门管理</div>
+					<div class="topRight" onclick="location.href='jobCardSetRole.html'">角色管理</div>
+				</div>
+				<div class="jobsLeft fl">
+					<ul id="leftTree"></ul>
+				</div>
+				<div class="jobSetList jobsRight fr">
+					<div class="Jobsearch fl">
+						<input type="text" placeholder="姓名" />
+						<span><i class="iconfont icon-sousuo-sousuo1"></i>搜索</span>
+					</div>
+					<div class="titleSelect fr mb15">
+						<ul class="chankbox">
+							<li><button class='Btn'>新增</button></li>
+							<li><button class='Btn'>修改</button></li>
+							<li><button class='Btn delChecked'>删除</button></li>
+						</ul>
+					</div>
+					<table class="tableList mt10">
+						<thead class="Thead">
+							<tr>
+								<th><label class="checklableF uncheckedF check-all"><input type="checkbox" class="checkboxF"/></label>全选</th>
+								<th>序号</th>
+								<th>一级主体</th>
+								<th>二级主体</th>
+								<th>三级主体</th>
+								<th>创建时间</th>
+								<th>创建用户</th>
+							</tr>
+						</thead>
+						<tbody class="Tbody">
+							<tr>
+								<td><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label></td>
+								<td>1</td>
+								<td>丽江市政府</td>
+								<td>旅发委 </td>
+								<td>信息科 </td>
+								<td>2017-02-27 12:14</td>
+								<td>管理员</td>
+							</tr>
+							<tr>
+								<td><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label></td>
+								<td>2</td>
+								<td>丽江市政府</td>
+								<td>旅发委 </td>
+								<td>信息科 </td>
+								<td>2017-02-27 12:14</td>
+								<td>管理员</td>
+							</tr>
+							<tr>
+								<td><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label></td>
+								<td>3</td>
+								<td>丽江市政府</td>
+								<td>旅发委 </td>
+								<td>信息科 </td>
+								<td>2017-02-27 12:14</td>
+								<td>管理员</td>
+							</tr>
+							<tr>
+								<td><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label></td>
+								<td>4</td>
+								<td>丽江市政府</td>
+								<td>旅发委 </td>
+								<td>信息科 </td>
+								<td>2017-02-27 12:14</td>
+								<td>管理员</td>
+							</tr>
+							<tr>
+								<td><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label></td>
+								<td>5</td>
+								<td>丽江市政府</td>
+								<td>旅发委 </td>
+								<td>信息科 </td>
+								<td>2017-02-27 12:14</td>
+								<td>管理员</td>
+							</tr>
+							<tr>
+								<td><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label></td>
+								<td>6</td>
+								<td>丽江市政府</td>
+								<td>旅发委 </td>
+								<td>信息科 </td>
+								<td>2017-02-27 12:14</td>
+								<td>管理员</td>
+							</tr>
+							<tr>
+								<td><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label></td>
+								<td>7</td>
+								<td>丽江市政府</td>
+								<td>旅发委 </td>
+								<td>信息科 </td>
+								<td>2017-02-27 12:14</td>
+								<td>管理员</td>
+							</tr>
+							<tr>
+								<td><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label></td>
+								<td>8</td>
+								<td>丽江市政府</td>
+								<td>旅发委 </td>
+								<td>信息科 </td>
+								<td>2017-02-27 12:14</td>
+								<td>管理员</td>
+							</tr>
+							<tr>
+								<td><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label></td>
+								<td>9</td>
+								<td>丽江市政府</td>
+								<td>旅发委 </td>
+								<td>信息科 </td>
+								<td>2017-02-27 12:14</td>
+								<td>管理员</td>
+							</tr>
+							<tr>
+								<td><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label></td>
+								<td>10</td>
+								<td>丽江市政府</td>
+								<td>旅发委 </td>
+								<td>信息科 </td>
+								<td>2017-02-27 12:14</td>
+								<td>管理员</td>
+							</tr>
+
+						</tbody>
+					</table>
+					<div class="paging">
+						<ul>
+							<li><i class="iconfont icon-first1"></i></li>
+							<li>
+								<</li>
+									<li>
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li class="active">
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>></li>
+									<li><i class="iconfont icon-last1"></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 图片背景 -->
+		<div class="body-bg">
+			<img src="../images/bg_body.jpg">
+		</div>
+	</body>
+	<script src="../Lib/jquery-1.12.4.min.js"></script>
+	<script src="../Lib/public.js"></script>
+	<script src="../Lib/layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.use(['tree', 'layer'], function() {
+			var layer = layui.layer,
+				$ = layui.jquery;
+			layui.tree({
+				elem: '#leftTree', //指定元素					
+				target: '_blank', //是否新选项卡打开（比如节点返回href才有效）					
+				click: function(item) { //点击节点回调
+					layer.msg( /*'当前节名称：'+ item.name + '<br>全部参数：'+ JSON.stringify(item)*/ );
+					console.log(item);
+				},
+				nodes: [ //节点
+					{
+						name: '丽江市政府',
+						id: 2,
+						spread: true,
+						children: [{
+							name: '工信委',
+							id: 21,
+							spread: true,
+							children: [{
+								name: 'AAA',
+								id: 211
+							}, {
+								name: 'BBB',
+								id: 212
+							}, {
+								name: 'CCC',
+								id: 213
+							}]
+						}, {
+							name: '旅发委',
+							id: 22,
+							children: [{
+								name: 'DDD',
+								id: 221
+							}, {
+								name: '网信办',
+								id: 222
+							}]
+						}, {
+							name: '环保局',
+							id: 21,
+							spread: true,
+							children: [{
+								name: 'EEE',
+								id: 211
+							}, {
+								name: 'FFF',
+								id: 212
+							}, {
+								name: 'GGG',
+								id: 213
+							}]
+						}, {
+							name: '环保局',
+							id: 21,
+							spread: true,
+							children: [{
+								name: 'AAA',
+								id: 211,
+								children: [{
+									name: 'Aaa',
+									id: 2111
+								}, {
+									name: 'Abb',
+									id: 2112
+								}, {
+									name: 'Acc',
+									id: 2113
+								}]
+							}, {
+								name: '部门1',
+								id: 212
+							}, {
+								name: '部门2',
+								id: 213
+							}]
+						}]
+					},
+					{
+						name: '涉旅企业',
+						id: 2,
+						spread: true,
+						children: [{
+							name: 'XXX酒店',
+							id: 21,
+							spread: true,
+							children: [{
+								name: '酒店1',
+								id: 211
+							}, {
+								name: '酒店2',
+								id: 212
+							}, {
+								name: '酒店3',
+								id: 213
+							}]
+						}, {
+							name: 'XXX旅行社',
+							id: 22,
+							children: [{
+								name: '旅行社1',
+								id: 221
+							}, {
+								name: '旅行社2',
+								id: 222
+							}, {
+								name: '旅行社3',
+								id: 223
+							}]
+						}]
+					}
+
+				]
+			});
+
+			//生成一个模拟树
+			var createTree = function(node, start) {
+				node = node || function() {
+					var arr = [];
+					for(var i = 1; i < 10; i++) {
+						arr.push({
+							name: i.toString().replace(/(\d)/, '$1$1$1$1$1$1$1$1$1')
+						});
+					}
+					return arr;
+				}();
+				start = start || 1;
+				layui.each(node, function(index, item) {
+					if(start < 10 && index < 9) {
+						var child = [{
+							name: (1 + index + start).toString().replace(/(\d)/, '$1$1$1$1$1$1$1$1$1')
+						}];
+						node[index].children = child;
+						createTree(child, index + start + 1);
+					}
+				});
+				return node;
+			};
+		});
+	</script>
+</html>

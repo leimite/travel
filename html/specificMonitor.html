@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="head">
+	<div class="logTitle">旅游综合治理大数据平台</div>
+	<div class="Select headListleft">
+		<p>全网实时监测</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='feelAlarm.html'">舆情实时预警</li>
+			<li onclick="location.href='index.html'">舆情分析朔源</li>
+			<li onclick="location.href='specificMonitor.html'">特定对象监测</li>
+			<li onclick="location.href='setProperty.html'">舆情属性配置</li>
+		</ul>
+	</div>
+	<div class="Select headListright">
+		<p>联动应急处理</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='sendJobCard.html'">舆情预警派单</li>
+			<li onclick="location.href='jobCardDeal.html'">预警工单处理</li>
+			<li onclick="location.href='jobCardSetRole.html'">工单配置管理</li>
+		</ul>
+	</div>
+	<div class="timeer">
+		<div class="timer"></div>
+		<div class="dater"></div>
+	</div>
+</div>
+
+			<div class="content">
+				<div class="main1">
+					<div class="main1Left fl">
+						<div class="LeftTitle">OTA低价产品预警 </div>
+						<div class="titleSelect">
+							<ul class="chankbox">
+								<li>
+									<label class="checklable unchecked check-all">
+										<input type="checkbox" class="checkbox"/>
+									</label>24小时
+								</li>
+								<li>
+									<label class="checklable unchecked">
+										<input type="checkbox" class="checkbox"/>
+									</label>一周
+								</li>
+								<li>
+									<label class="checklable checked">
+										<input type="checkbox" class="checkbox"/>
+									</label>一个月
+								</li>
+								<li>
+									<input type="text" class="p_myDatePicker" placeholder="开始时间" id="impetusDPstart" onclick="WdatePicker({el:'impetusDPstart',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/>
+								</li>
+								<li>-</li>
+								<li>
+									<input type="text" class="p_myDatePicker" placeholder="结束时间" id="impetusDPend" onclick="WdatePicker({el:'impetusDPend',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/>
+								</li>
+							</ul>
+						</div>
+						<table class="tableList mt15">
+							<thead class="Thead">
+								<tr>
+									<th>序号</th>
+									<th>产品名称</th>
+									<th>渠道价格</th>
+									<th>参考价格</th>
+									<th>OTA渠道</th>
+									<th>所属旅行社</th>
+									<th>出发时间</th>
+									<th>出发地</th>
+								</tr>
+							</thead>
+							<tbody class="Tbody">
+								<tr>
+									<td>1</td>
+									<td>云南丽江5天自由行 </td>
+									<td>210</td>
+									<td>350</td>
+									<td>去哪儿</td>
+									<td>广西顺途旅行社有限公司</td>
+									<td>2017-02-27</td>
+									<td>桂林</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>云南丽江5天自由行 </td>
+									<td>210</td>
+									<td>350</td>
+									<td>去哪儿</td>
+									<td>广西顺途旅行社有限公司</td>
+									<td>2017-02-27</td>
+									<td>桂林</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>云南丽江5天自由行 </td>
+									<td>210</td>
+									<td>350</td>
+									<td>去哪儿</td>
+									<td>广西顺途旅行社有限公司</td>
+									<td>2017-02-27</td>
+									<td>桂林</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>云南丽江5天自由行 </td>
+									<td>210</td>
+									<td>350</td>
+									<td>去哪儿</td>
+									<td>广西顺途旅行社有限公司</td>
+									<td>2017-02-27</td>
+									<td>桂林</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>云南丽江5天自由行 </td>
+									<td>210</td>
+									<td>350</td>
+									<td>去哪儿</td>
+									<td>广西顺途旅行社有限公司</td>
+									<td>2017-02-27</td>
+									<td>桂林</td>
+								</tr>															
+							</tbody>
+						</table>
+					<div class="paging">
+						<ul>
+							<li><i class="iconfont icon-first1"></i></li>
+							<li><</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li class="active"><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li>></li>
+							<li><i class="iconfont icon-last1"></i></li>
+						</ul>
+					</div>					
+					</div>
+					<div class="main1Right fr">
+						<div class="LeftTitle">OTA低价产品旅行社预警 </div>
+						<table class="tableList mt15">
+							<thead class="Thead">
+								<tr>
+									<th>序号</th>
+									<th>旅行社名称</th>
+									<th>本月低价产品数</th>
+									<th>上月低价产品数</th>
+								</tr>
+							</thead>
+							<tbody class="Tbody">
+								<tr>
+									<td>1</td>
+									<td>云南丽江5天自由行 </td>
+									<td>210</td>
+									<td>350</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>云南丽江5天自由行 </td>
+									<td>210</td>
+									<td>350</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>云南丽江5天自由行 </td>
+									<td>210</td>
+									<td>350</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>云南丽江5天自由行 </td>
+									<td>210</td>
+									<td>350</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>云南丽江5天自由行 </td>
+									<td>210</td>
+									<td>350</td>
+								</tr>
+													
+							</tbody>
+						</table>
+					<div class="paging">
+						<ul>
+							<li><i class="iconfont icon-first1"></i></li>
+							<li><</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li class="active"><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li>></li>
+							<li><i class="iconfont icon-last1"></i></li>
+						</ul>
+					</div>							
+					</div>
+				</div>
+				<div class="main2 mt10">
+					<div class="LeftTitle">OTA差评产品预警 </div>	
+					<table class="tableList mt15">
+						<thead class="Thead">
+							<tr>
+								<th>序号</th>
+								<th>产品名称</th>
+								<th>产品销量</th>
+								<th>差评率</th>
+								<th>OTA渠道</th>
+								<th>所属旅行社</th>
+								<th>差评原因</th>
+								<th>出发地</th>
+							</tr>
+						</thead>
+						<tbody class="Tbody">
+							<tr>
+								<td>1</td>
+								<td>云南丽江5天自由行 </td>
+								<td>73</td>
+								<td>7.95%</td>
+								<td>去哪儿</td>
+								<td>鸿运国旅旗舰店</td>
+								<td>住宿环境不好</td>
+								<td>桂林</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>云南丽江5天自由行 </td>
+								<td>73</td>
+								<td>7.95%</td>
+								<td>去哪儿</td>
+								<td>鸿运国旅旗舰店</td>
+								<td>住宿环境不好</td>
+								<td>桂林</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>云南丽江5天自由行 </td>
+								<td>73</td>
+								<td>7.95%</td>
+								<td>去哪儿</td>
+								<td>鸿运国旅旗舰店</td>
+								<td>住宿环境不好</td>
+								<td>桂林</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>云南丽江5天自由行 </td>
+								<td>73</td>
+								<td>7.95%</td>
+								<td>去哪儿</td>
+								<td>鸿运国旅旗舰店</td>
+								<td>住宿环境不好</td>
+								<td>桂林</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>云南丽江5天自由行 </td>
+								<td>73</td>
+								<td>7.95%</td>
+								<td>去哪儿</td>
+								<td>鸿运国旅旗舰店</td>
+								<td>住宿环境不好</td>
+								<td>桂林</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>云南丽江5天自由行 </td>
+								<td>73</td>
+								<td>7.95%</td>
+								<td>去哪儿</td>
+								<td>鸿运国旅旗舰店</td>
+								<td>住宿环境不好</td>
+								<td>桂林</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>云南丽江5天自由行 </td>
+								<td>73</td>
+								<td>7.95%</td>
+								<td>去哪儿</td>
+								<td>鸿运国旅旗舰店</td>
+								<td>住宿环境不好</td>
+								<td>桂林</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>云南丽江5天自由行 </td>
+								<td>73</td>
+								<td>7.95%</td>
+								<td>去哪儿</td>
+								<td>鸿运国旅旗舰店</td>
+								<td>住宿环境不好</td>
+								<td>桂林</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>云南丽江5天自由行 </td>
+								<td>73</td>
+								<td>7.95%</td>
+								<td>去哪儿</td>
+								<td>鸿运国旅旗舰店</td>
+								<td>住宿环境不好</td>
+								<td>桂林</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>云南丽江5天自由行 </td>
+								<td>73</td>
+								<td>7.95%</td>
+								<td>去哪儿</td>
+								<td>鸿运国旅旗舰店</td>
+								<td>住宿环境不好</td>
+								<td>桂林</td>
+							</tr>
+																					
+						</tbody>
+					</table>														
+				</div>
+				<div class="main3 mt10">
+					<div class="topTitle"><div class="LeftTitle">OTA差评旅行社</div></div>				
+					<div class="main3Left fl">						
+						<table class="tableList mt15">
+							<thead class="Thead">
+								<tr>
+									<th colspan="3"><span>差评旅行社</span>TOP10</th>
+								</tr>
+							</thead>
+							<tbody class="Tbody">
+								<tr>
+									<td>1</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>23.81%</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>23.81%</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>23.81%</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>23.81%</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>23.81%</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>23.81%</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>23.81%</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>23.81%</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>23.81%</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>23.81%</td>
+								</tr>												
+							</tbody>
+						</table>						
+					</div>
+					<div class="main3Right fr">
+						<table class="tableList mt15">
+							<thead class="Thead">
+								<tr>
+									<th>序号</th>
+									<th>旅行社名称</th>
+									<th>产品数量</th>
+									<th>平均差评率</th>
+									<th>总评价数</th>
+									<th>总差评数</th>
+									<th>平均评价数</th>
+									<th>平均差评数</th>
+								</tr>
+							</thead>
+							<tbody class="Tbody">
+								<tr>
+									<td>1</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>5</td>
+									<td>7.95%</td>
+									<td>40</td>
+									<td>6</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>5</td>
+									<td>7.95%</td>
+									<td>40</td>
+									<td>6</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>5</td>
+									<td>7.95%</td>
+									<td>40</td>
+									<td>6</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>5</td>
+									<td>7.95%</td>
+									<td>40</td>
+									<td>6</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>5</td>
+									<td>7.95%</td>
+									<td>40</td>
+									<td>6</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>5</td>
+									<td>7.95%</td>
+									<td>40</td>
+									<td>6</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>5</td>
+									<td>7.95%</td>
+									<td>40</td>
+									<td>6</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>5</td>
+									<td>7.95%</td>
+									<td>40</td>
+									<td>6</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>5</td>
+									<td>7.95%</td>
+									<td>40</td>
+									<td>6</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>昆明康辉永升旅行社有限公司</td>
+									<td>5</td>
+									<td>7.95%</td>
+									<td>40</td>
+									<td>6</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+														
+							</tbody>
+						</table>					
+					</div>					
+				</div>
+				<div class="main4 mt10">
+					<div class="topTitle mb15"><div class="LeftTitle">微博/微信账号监测预警</div></div>
+					<div class="main4Left fl">
+						<div class="main4Ltop">
+							<div class="tdTitle">微博账号发文预警 </div>
+							<table class="tableList mt15">
+								<thead class="Thead">
+									<tr>
+										<th>账号名称</th>
+										<th>上次发文时间</th>
+										<th>上次发文内容</th>
+									</tr>
+								</thead>
+								<tbody class="Tbody">
+									<tr>
+										<td>丽江AAA </td>
+										<td>2016-12-12</td>
+										<td>发文标题摘要#####</td>
+									</tr>
+									<tr>
+										<td>丽江AAA </td>
+										<td>2016-12-12</td>
+										<td>发文标题摘要#####</td>
+									</tr>
+									<tr>
+										<td>丽江AAA </td>
+										<td>2016-12-12</td>
+										<td>发文标题摘要#####</td>
+									</tr>
+									<tr>
+										<td>丽江AAA </td>
+										<td>2016-12-12</td>
+										<td>发文标题摘要#####</td>
+									</tr>
+									<tr>
+										<td>丽江AAA </td>
+										<td>2016-12-12</td>
+										<td>发文标题摘要#####</td>
+									</tr>
+													
+								</tbody>
+							</table>	
+						</div>
+						<div class="main4Lbot">
+							<div class="tdTitle">微信账号发文预警 </div>
+							<table class="tableList mt15">
+								<thead class="Thead">
+									<tr>
+										<th>账号名称</th>
+										<th>上次发文时间</th>
+										<th>上次发文内容</th>
+									</tr>
+								</thead>
+								<tbody class="Tbody">
+									<tr>
+										<td>丽江AAA </td>
+										<td>2016-12-12</td>
+										<td>发文标题摘要#####</td>
+									</tr>
+									<tr>
+										<td>丽江AAA </td>
+										<td>2016-12-12</td>
+										<td>发文标题摘要#####</td>
+									</tr>
+									<tr>
+										<td>丽江AAA </td>
+										<td>2016-12-12</td>
+										<td>发文标题摘要#####</td>
+									</tr>
+									<tr>
+										<td>丽江AAA </td>
+										<td>2016-12-12</td>
+										<td>发文标题摘要#####</td>
+									</tr>
+									<tr>
+										<td>丽江AAA </td>
+										<td>2016-12-12</td>
+										<td>发文标题摘要#####</td>
+									</tr>
+													
+								</tbody>
+							</table>								
+						</div>
+					</div>
+					<div class="main4Right fr">
+						<div class="tdTitle">微博/微信账号发文详单 </div>
+						<table class="tableList mt15">
+							<thead class="Thead">
+								<tr>
+									<th>时间</th>
+									<th>账号名称</th>
+									<th>账号类型</th>
+									<th>发文标题摘要</th>
+								</tr>
+							</thead>
+							<tbody class="Tbody">
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+								<tr>
+									<td>2017-03-02   12:03</td>
+									<td>丽江AAA</td>
+									<td>微信</td>
+									<td>发文标题摘要发文标题摘要</td>
+								</tr>
+													
+							</tbody>
+						</table>											
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 图片背景 -->
+		<div class="body-bg">
+		    <img src="../images/bg_body.jpg">
+		</div>		
+	</body>
+	<script src="../Lib/jquery-1.12.4.min.js"></script>
+	<script src="../Lib/public.js"></script>
+	<script src="../Lib/DatePicker/WdatePicker.js"></script>
+</html>

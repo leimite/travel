@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="head">
+	<div class="logTitle">旅游综合治理大数据平台</div>
+	<div class="Select headListleft">
+		<p>全网实时监测</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='feelAlarm.html'">舆情实时预警</li>
+			<li onclick="location.href='index.html'">舆情分析朔源</li>
+			<li onclick="location.href='specificMonitor.html'">特定对象监测</li>
+			<li onclick="location.href='setProperty.html'">舆情属性配置</li>
+		</ul>
+	</div>
+	<div class="Select headListright">
+		<p>联动应急处理</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='sendJobCard.html'">舆情预警派单</li>
+			<li onclick="location.href='jobCardDeal.html'">预警工单处理</li>
+			<li onclick="location.href='jobCardSetRole.html'">工单配置管理</li>
+		</ul>
+	</div>
+	<div class="timeer">
+		<div class="timer"></div>
+		<div class="dater"></div>
+	</div>
+</div>
+
+			<div class="content contentBorder">
+				<div class="feelsMoreTop">
+					<div class="LeftTitle">更多舆情动态</div>
+						<span class='Btn fr returnBtn'>
+							<a href="feelAlarm.html"><i class="iconfont icon-fanhui1"></i>返回</a>
+						</span>						
+						<ul class="chankbox feelSel">
+							<li>
+								<span>主题名称：</span>
+								<div class="mnSel feelMn">
+									<p>丽江打人事件</p>
+									<i></i>
+									<ul>
+										<li>白沟新城</li>
+										<li>安全生产</li>
+										<li>农业部</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<span>关键词：</span>
+								<input type="text" placeholder='丽江  古城  打人'/>
+							</li>							
+							<li>
+								<span>情感类型：</span>
+								<div class="mnSel">
+									<p>全部</p>
+									<i></i>
+									<ul>
+										<li>正面</li>
+										<li>中性</li>
+										<li>负面</li>
+									</ul>
+								</div>
+							</li>
+							
+							<li>
+								<label class="checklable unchecked check-all">
+									<input type="checkbox" class="checkbox"/>
+								</label>24小时
+							</li>
+							<li>
+								<label class="checklable unchecked">
+									<input type="checkbox" class="checkbox"/>
+								</label>一周
+							</li>
+							<li>
+								<label class="checklable checked">
+									<input type="checkbox" class="checkbox"/>
+								</label>一个月
+							</li>
+							<li>
+								<input type="text" class="p_myDatePicker" placeholder="开始时间" id="impetusDPstart" onclick="WdatePicker({el:'impetusDPstart',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})" />
+							</li>
+							<li>-</li>
+							<li>
+								<input type="text" class="p_myDatePicker" placeholder="结束时间" id="impetusDPend" onclick="WdatePicker({el:'impetusDPend',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})" />
+							</li>
+							<li class='fr'>
+								<button class='but'>查询</button>
+							</li>
+						</ul>
+		
+				</div>
+				<div class="feelsMoreMid">
+					<span>排序：</span>
+					<span class='Btn sort'>相关度<i class="iconfont icon-paixu"></i></span>
+					<span class='Btn sort'>发布时间<i class="iconfont icon-paixu"></i></span>
+					<span class='fr'><label class="checklableF uncheckedF"><input type="checkbox" class="checkboxF"/></label>合并相似文章</span>
+				</div>
+				<div class="feelsMoreBot">
+					<ul class="feelsList moreList">
+						<li>
+							<h3 class="fl">
+								<span>[长江网] 国家旅游局前局长邵琪伟：让游客少点烦心，多点舒心！</span>
+								<span class='tag yellowTag'>中性</span>						
+								<div class='listTime'>
+									<span>中国藏族网通  2017-03-05  15:31:23</span>
+									<a href="#" class='Artlink'>原文链接</a>
+								</div>
+							</h3>
+							<div class='xswz fr'>
+								<a href="#"><span>相似文章(3)</span></a>
+								<a href="#"><i class="iconfont icon-fill85"></i></a>
+								<a href="#"><i class="iconfont icon-fenxiang"></i></a>
+							</div>
+							<div class="article fl">一些列的旅游乱象，让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,今年春节...</div>
+						</li>
+						<li>
+							<h3 class="fl">
+								<span>[长江网] 国家旅游局前局长邵琪伟：让游客少点烦心，多点舒心！</span>
+								<span class='tag blueTag'>正面</span>						
+								<div class='listTime'>
+									<span>中国藏族网通  2017-03-05  15:31:23</span>
+									<a href="#" class='Artlink'>原文链接</a>
+								</div>
+							</h3>
+							<div class='xswz fr'>
+								<a href="#"><span>相似文章(3)</span></a>
+								<a href="#"><i class="iconfont icon-fill85"></i></a>
+								<a href="#"><i class="iconfont icon-fenxiang"></i></a>
+							</div>
+							<div class="article fl">一些列的旅游乱象，让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,今年春节...</div>
+						</li>
+						<li>
+							<h3 class="fl">
+								<span>[长江网] 国家旅游局前局长邵琪伟：让游客少点烦心，多点舒心！</span>
+								<span class='tag redTag'>正面</span>						
+								<div class='listTime'>
+									<span>中国藏族网通  2017-03-05  15:31:23</span>
+									<a href="#" class='Artlink'>原文链接</a>
+								</div>
+							</h3>
+							<div class='xswz fr'>
+								<a href="#"><span>相似文章(3)</span></a>
+								<a href="#"><i class="iconfont icon-fill85"></i></a>
+								<a href="#"><i class="iconfont icon-fenxiang"></i></a>
+							</div>
+							<div class="article fl">一些列的旅游乱象，让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,今年春节...</div>
+						</li>
+						<li>
+							<h3 class="fl">
+								<span>[长江网] 国家旅游局前局长邵琪伟：让游客少点烦心，多点舒心！</span>
+								<span class='tag blueTag'>正面</span>						
+								<div class='listTime'>
+									<span>中国藏族网通  2017-03-05  15:31:23</span>
+									<a href="#" class='Artlink'>原文链接</a>
+								</div>
+							</h3>
+							<div class='xswz fr'>
+								<a href="#"><span>相似文章(3)</span></a>
+								<a href="#"><i class="iconfont icon-fill85"></i></a>
+								<a href="#"><i class="iconfont icon-fenxiang"></i></a>
+							</div>
+							<div class="article fl">一些列的旅游乱象，让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,今年春节...</div>
+						</li>
+						<li>
+							<h3 class="fl">
+								<span>[长江网] 国家旅游局前局长邵琪伟：让游客少点烦心，多点舒心！</span>
+								<span class='tag blueTag'>正面</span>						
+								<div class='listTime'>
+									<span>中国藏族网通  2017-03-05  15:31:23</span>
+									<a href="#" class='Artlink'>原文链接</a>
+								</div>
+							</h3>
+							<div class='xswz fr'>
+								<a href="#"><span>相似文章(3)</span></a>
+								<a href="#"><i class="iconfont icon-fill85"></i></a>
+								<a href="#"><i class="iconfont icon-fenxiang"></i></a>
+							</div>
+							<div class="article fl">一些列的旅游乱象，让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,今年春节...</div>
+						</li>
+						<li>
+							<h3 class="fl">
+								<span>[长江网] 国家旅游局前局长邵琪伟：让游客少点烦心，多点舒心！</span>
+								<span class='tag yellowTag'>中性</span>						
+								<div class='listTime'>
+									<span>中国藏族网通  2017-03-05  15:31:23</span>
+									<a href="#" class='Artlink'>原文链接</a>
+								</div>
+							</h3>
+							<div class='xswz fr'>
+								<a href="#"><span>相似文章(3)</span></a>
+								<a href="#"><i class="iconfont icon-fill85"></i></a>
+								<a href="#"><i class="iconfont icon-fenxiang"></i></a>
+							</div>
+							<div class="article fl">一些列的旅游乱象，让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,今年春节...</div>
+						</li>
+						<li>
+							<h3 class="fl">
+								<span>[长江网] 国家旅游局前局长邵琪伟：让游客少点烦心，多点舒心！</span>
+								<span class='tag redTag'>负面</span>						
+								<div class='listTime'>
+									<span>中国藏族网通  2017-03-05  15:31:23</span>
+									<a href="#" class='Artlink'>原文链接</a>
+								</div>
+							</h3>
+							<div class='xswz fr'>
+								<a href="#"><span>相似文章(3)</span></a>
+								<a href="#"><i class="iconfont icon-fill85"></i></a>
+								<a href="#"><i class="iconfont icon-fenxiang"></i></a>
+							</div>
+							<div class="article fl">一些列的旅游乱象，让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,让“彩云正在各行各业相继呈现低迷发展的状态下,旅游业可谓是"一枝独秀",旅游经济成为各地GDP的重要贡献者。全国假日办发布的《2012年春节黄金周旅游统计报告》显示,今年春节...</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 图片背景 -->
+		<div class="body-bg">
+			<img src="../images/bg_body.jpg">
+		</div>
+	</body>
+	<script src="../Lib/jquery-1.12.4.min.js"></script>
+	<script src="../Lib/public.js"></script>
+	<script src="../Lib/DatePicker/WdatePicker.js"></script>
+
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="head">
+	<div class="logTitle">旅游综合治理大数据平台</div>
+	<div class="Select headListleft">
+		<p>全网实时监测</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='feelAlarm.html'">舆情实时预警</li>
+			<li onclick="location.href='index.html'">舆情分析朔源</li>
+			<li onclick="location.href='specificMonitor.html'">特定对象监测</li>
+			<li onclick="location.href='setProperty.html'">舆情属性配置</li>
+		</ul>
+	</div>
+	<div class="Select headListright">
+		<p>联动应急处理</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='sendJobCard.html'">舆情预警派单</li>
+			<li onclick="location.href='jobCardDeal.html'">预警工单处理</li>
+			<li onclick="location.href='jobCardSetRole.html'">工单配置管理</li>
+		</ul>
+	</div>
+	<div class="timeer">
+		<div class="timer"></div>
+		<div class="dater"></div>
+	</div>
+</div>
+
+			<div class="content">
+				<div class="sendOrders">
+					<div class="LeftTitle">舆情预警派单</div>
+					<div class="sendTop">
+						<ul class="topLI">
+							<li>
+								<span>预警日期：</span>
+								<input type="text" class="p_myDatePicker" placeholder="日期选择" id="choose" onclick="WdatePicker({el:'choose',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/>
+							</li>							
+							<li>
+								<span>舆情关键词：</span>
+								<input type="text" class='words'/>
+							</li>
+							<li>
+								<span>预警状态：</span>
+								<div class="mnSel">
+									<p>全部</p>
+									<i></i>
+									<ul>
+										<li>已派单</li>
+										<li>暂未派单</li>
+										<li>已删除</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<span>预警等级：</span>
+								<div class="mnSel">
+									<p>全部</p>
+									<i></i>
+									<ul>
+										<li>橙色预警</li>
+										<li>红色预警</li>
+										<li>黄色预警</li>
+										<li>蓝色预警</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<ul class="topLI">
+							<li>
+								<span>工单状态：</span>
+								<div class="mnSel">
+									<p>全部</p>
+									<i></i>
+									<ul>
+										<li>处理中</li>
+										<li>未处理</li>
+										<li>已完成</li>
+									</ul>
+								</div>								
+							</li>							
+							<li>
+								<span>工单号：</span>
+								<input type="text" class='words'/>
+							</li>
+							<li>
+								<span>工单优先级：</span>
+								<div class="mnSel">
+									<p>全部</p>
+									<i></i>
+									<ul>
+										<li>高</li>
+										<li>中</li>
+										<li>低</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<span>当前处理部门：</span>
+								<div class="mnSel">
+									<p>全部</p>
+									<i></i>
+									<ul>
+										<li>旅发委</li>
+										<li>旅发委</li>
+										<li>旅发委</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<div class="butDiv">
+							<button class='but'>查询</button>
+						</div>
+					</div>
+					<div class="sendContent">
+						<table class="tableList">
+							<thead class="Thead sendThead">
+								<tr>
+									<th>序号</th>
+									<th>舆情预警标题</th>
+									<th>预警时间</th>
+									<th>预警等级</th>
+									<th>预警状态</th>
+									<th>工单处理时限</th>
+									<th>优先级</th>
+									<th>工单状态</th>
+									<th>当前责任人</th>
+									<th>当前处理部门</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody class="Tbody sendTbody">
+								<tr>
+									<td>1</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td>暂未派单</td>
+									<td>2017-02-27</td>
+									<td>高</td>
+									<td>处理中</td>
+									<td>李四</td>
+									<td>旅发委</td>
+									<td>
+										<span class="creatBtn">生成</span>
+										<span class="selBtn listCheck">查看</span>
+										<span class="delBtn">删除</span>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td>暂未派单</td>
+									<td>2017-02-27</td>
+									<td>高</td>
+									<td>处理中</td>
+									<td>李四</td>
+									<td>旅发委</td>
+									<td>
+										<span class="creatBtn">生成</span>
+										<span class="selBtn listCheck">查看</span>
+										<span class="delBtn">删除</span>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td>暂未派单</td>
+									<td>2017-02-27</td>
+									<td>高</td>
+									<td>处理中</td>
+									<td>李四</td>
+									<td>旅发委</td>
+									<td>
+										<span class="creatBtn">生成</span>
+										<span class="selBtn listCheck">查看</span>
+										<span class="delBtn">删除</span>
+									</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td>暂未派单</td>
+									<td>2017-02-27</td>
+									<td>高</td>
+									<td>处理中</td>
+									<td>李四</td>
+									<td>旅发委</td>
+									<td>
+										<span class="creatBtn">生成</span>
+										<span class="selBtn listCheck">查看</span>
+										<span class="delBtn">删除</span>
+									</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td>暂未派单</td>
+									<td>2017-02-27</td>
+									<td>高</td>
+									<td>处理中</td>
+									<td>李四</td>
+									<td>旅发委</td>
+									<td>
+										<span class="creatBtn">生成</span>
+										<span class="selBtn listCheck">查看</span>
+										<span class="delBtn">删除</span>
+									</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td>暂未派单</td>
+									<td>2017-02-27</td>
+									<td>高</td>
+									<td>处理中</td>
+									<td>李四</td>
+									<td>旅发委</td>
+									<td>
+										<span class="creatBtn">生成</span>
+										<span class="selBtn listCheck">查看</span>
+										<span class="delBtn">删除</span>
+									</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td>暂未派单</td>
+									<td>2017-02-27</td>
+									<td>高</td>
+									<td>处理中</td>
+									<td>李四</td>
+									<td>旅发委</td>
+									<td>
+										<span class="creatBtn">生成</span>
+										<span class="selBtn listCheck">查看</span>
+										<span class="delBtn">删除</span>
+									</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td>暂未派单</td>
+									<td>2017-02-27</td>
+									<td>高</td>
+									<td>处理中</td>
+									<td>李四</td>
+									<td>旅发委</td>
+									<td>
+										<span class="creatBtn">生成</span>
+										<span class="selBtn listCheck">查看</span>
+										<span class="delBtn">删除</span>
+									</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td>暂未派单</td>
+									<td>2017-02-27</td>
+									<td>高</td>
+									<td>处理中</td>
+									<td>李四</td>
+									<td>旅发委</td>
+									<td>
+										<span class="creatBtn">生成</span>
+										<span class="selBtn listCheck">查看</span>
+										<span class="delBtn">删除</span>
+									</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>颜值爆表却被投诉 云南旅游乱象怎么治？</td>
+									<td>2017-02-27</td>
+									<td>橙色预警</td>
+									<td>暂未派单</td>
+									<td>2017-02-27</td>
+									<td>高</td>
+									<td>处理中</td>
+									<td>李四</td>
+									<td>旅发委</td>
+									<td>
+										<span class="creatBtn">生成</span>
+										<span class="selBtn listCheck">查看</span>
+										<span class="delBtn">删除</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					<div class="paging">
+						<ul>
+							<li><i class="iconfont icon-first1"></i></li>
+							<li><</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li class="active"><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li>></li>
+							<li><i class="iconfont icon-last1"></i></li>
+						</ul>
+					</div>
+					</div>
+				</div>
+				<div class="sendEcharts">
+					<div class="LeftTitle">工单处理总揽</div>
+					<div class="dateSelect">
+						<span>本周</span>
+						<span>本月</span>
+						<span>全部</span>
+						<span>自定义</span>
+					</div>
+					<div class="charts4">
+						<div class="sendchartsLeft mt30">
+							<div class="workorderListtitle">工单处理概况</div>
+							<div class="EchartsBox" id="workorderList"></div>
+						</div>
+						<div class="sendchartsRight">
+							<div class="workorderListtitle">工单处理部门</div>						
+							<div class="EchartsBox" id="workorderPartment"></div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<!-- 图片背景 -->
+		<div class="body-bg">
+		    <img src="../images/bg_body.jpg">
+		</div>
+		<!--查看的弹窗-->
+		<div class="pop none pop03">
+		    <div class="pop03Tit">舆情告警标题：颜值爆表却被投诉 云南旅游乱象怎么治？</div>
+		    <div class="pop03Gdbh">工单编号：1001912730</div>
+		    <div class="progressLine">
+		    	<span>开始</span>
+		    	<span></span>
+		    	<span></span>
+		    	<span class="fr">结束</span>
+		    </div>
+		    <table class='lineTable'>
+				<tr>
+					<td>创建时间</td>
+					<td>2017-02-28 12:30</td>
+					<td>受理时间</td>
+					<td>2017-02-28 12:30</td>
+					<td>受理时间</td>
+					<td>2017-02-28 12:30</td>
+					<td>受理时间</td>
+					<td>2017-02-28 12:30</td>
+				</tr>
+				<tr>
+					<td>创建单位</td>
+					<td>网信办</td>
+					<td>创建单位</td>
+					<td>旅发委</td>
+					<td>创建单位</td>
+					<td>公安局</td>
+					<td>创建单位</td>
+					<td>网信办</td>
+				</tr>
+				<tr>
+					<td>创建对象</td>
+					<td>张三</td>
+					<td>受理对象</td>
+					<td>李四</td>
+					<td>受理对象</td>
+					<td>李四</td>
+					<td>受理对象</td>
+					<td>李四</td>
+				</tr>
+				<tr>
+					<td>联系电话</td>
+					<td>138-0101-0101</td>
+					<td>联系电话</td>
+					<td>138-0101-0101</td>
+					<td>联系电话</td>
+					<td>138-0101-0101</td>
+					<td>联系电话</td>
+					<td>138-0101-0101</td>
+				</tr>
+				<tr>
+					<td>受理时限</td>
+					<td>2017-02-28 12:30</td>
+					<td>受理时限</td>
+					<td>2017-02-28 12:30</td>
+					<td>受理时限</td>
+					<td>2017-02-28 12:30</td>
+					<td>受理时限</td>
+					<td>2017-02-28 12:30</td>
+				</tr>
+				<tr>
+					<td>备注说明</td>
+					<td>需旅发委配合处理。</td>
+					<td>备注说明</td>
+					<td>已协调商户解决，下一步需要公安局配合处理。</td>
+					<td>备注说明</td>
+					<td>处理完成，处理意见XXXXXXXXXX。</td>
+					<td>备注说明</td>
+					<td>已解决此问题。</td>
+				</tr>
+			</table>
+		</div>
+	<!--生成的弹窗-->		
+		<div class="pop none pop02 creatList">
+			<dl class="pop01List">
+				<dt>工单ID</dt>
+				<dd>XXXXXXX</dd>
+				<dt>优先级</dt>
+				<dd>
+					<select name="" id="">
+						<option value="" selected="selected">高</option>
+						<option value="">中</option>
+						<option value="">低</option>
+					</select>
+				</dd>
+				<dt>指派部门</dt>
+				<dd>
+					<select name="" id="">
+						<option value="" selected="selected">旅发委</option>
+						<option value="">公安局</option>
+						<option value="">网信办</option>
+					</select>
+				</dd>
+				<dt>指派对象</dt>
+				<dd>
+					<select name="" id="">
+						<option value="" selected="selected">张三</option>
+						<option value="">李四</option>
+						<option value="">王五</option>
+					</select>
+				</dd>
+				<dt>处理时限</dt>
+				<dd>
+					<select name="" id="">
+						<option value="" selected="selected">选择日期</option>
+						<option value="">2017/4/19</option>
+						<option value="">2017/4/20</option>
+						<option value="">2017/4/21</option>
+						<option value="">2017/4/22</option>
+					</select>
+				</dd>
+				<dt>备注说明</dt>
+				<dd>
+					<textarea name="" id="" cols="40" rows="6"></textarea>
+				</dd>
+			</dl>
+
+		</div>		
+				
+	</body>
+    <script src="../Lib/public.js"></script>
+    <script src="../Lib/Echarts/echarts.common.min.js"></script>
+    <script src="../js/sendJobCardEcharts.js"></script>
+    <script src="../Lib/DatePicker/WdatePicker.js"></script>
+    <script src="../Lib/layer/layer.js"></script>
+	<script>
+	    $(".listCheck").click(function(){
+	        layer.open({
+	            type: 1,
+	            title: false,
+	            area:'1240px',
+	            anim: 2,
+	            shadeClose: true,
+	            skin: 'popCss01',
+	            content: $('.pop03'),
+	            btn: ['取消'],
+	            btnAlign: 'c',
+	            fixed: false
+	        })
+	    })
+	    
+	    $(".creatBtn").click(function() {
+			layer.open({
+				type: 1,
+				title: false,
+				area: '615px',
+				anim: 2,
+				shadeClose: true,
+				skin: 'popCss01',
+				content: $('.pop02'),
+				btn: ['完成', '取消'],
+				btnAlign: 'c',
+				fixed: false
+			})
+		})
+	</script>
+</html>
+

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="head">
+	<div class="logTitle">旅游综合治理大数据平台</div>
+	<div class="Select headListleft">
+		<p>全网实时监测</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='feelAlarm.html'">舆情实时预警</li>
+			<li onclick="location.href='index.html'">舆情分析朔源</li>
+			<li onclick="location.href='specificMonitor.html'">特定对象监测</li>
+			<li onclick="location.href='setProperty.html'">舆情属性配置</li>
+		</ul>
+	</div>
+	<div class="Select headListright">
+		<p>联动应急处理</p>
+		<i></i>
+		<ul>
+			<li onclick="location.href='sendJobCard.html'">舆情预警派单</li>
+			<li onclick="location.href='jobCardDeal.html'">预警工单处理</li>
+			<li onclick="location.href='jobCardSetRole.html'">工单配置管理</li>
+		</ul>
+	</div>
+	<div class="timeer">
+		<div class="timer"></div>
+		<div class="dater"></div>
+	</div>
+</div>
+
+			<div class="content">
+				<div class="contentList">
+					<ul>
+						<li>舆情主题</li>
+						<li>
+							<a href="#">丽江旅游</a>
+						</li>
+					</ul>
+					<ul>
+						<li>舆情关键词</li>
+						<li>
+							<a href="#">旅游</a>
+						</li>
+						<li>
+							<a href="#">导游</a>
+						</li>
+						<li>
+							<a href="#">丽江</a>
+						</li>
+					</ul>
+				</div>
+				<div class="charts1">
+					<div class="LeftTitle">声势走量</div>
+					<button class="download fr">
+						<i class="iconfont icon-iconfont0071"></i>
+					</button>
+					<div class="titleSelect">
+						<ul class="chankbox">
+							<li>
+								<label class="checklable unchecked check-all">
+									<input type="checkbox" class="checkbox"/>
+								</label>24小时
+							</li>
+							<li>
+								<label class="checklable unchecked">
+									<input type="checkbox" class="checkbox"/>
+								</label>一周
+							</li>
+							<li>
+								<label class="checklable checked">
+									<input type="checkbox" class="checkbox"/>
+								</label>一个月
+							</li>
+							<li>
+								<input type="text" class="p_myDatePicker" placeholder="开始时间" id="impetusDPstart" onclick="WdatePicker({el:'impetusDPstart',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/>
+							</li>
+							<li>-</li>
+							<li>
+								<input type="text" class="p_myDatePicker" placeholder="结束时间" id="impetusDPend" onclick="WdatePicker({el:'impetusDPend',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/>
+							</li>
+						</ul>
+					</div>
+					<div class="EchartsBox" id="impetusEcharts"></div>
+				</div>
+				<div class="charts2">
+					<div class="charts2Left">
+						<div class="LeftTitle">媒体覆盖类型</div>
+						<button class="download fr"><i class="iconfont icon-iconfont0071"></i></button>
+						<div class="titleSelect">
+							<ul class="chankbox">
+								<li><label class="checklable unchecked check-all"><input type="checkbox" class="checkbox"/></label>24小时</li>
+								<li><label class="checklable unchecked"><input type="checkbox" class="checkbox"/></label>一周</li>
+								<li><label class="checklable checked"><input type="checkbox" class="checkbox"/></label>一个月</li>
+								<li><input type="text" class="p_myDatePicker" placeholder="开始时间" id="TypeDPstart" onclick="WdatePicker({el:'TypeDPstart',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+								<li>-</li>
+								<li><input type="text" class="p_myDatePicker" placeholder="结束时间" id="TypeDPend" onclick="WdatePicker({el:'TypeDPend',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+							</ul>
+						</div>
+						<div class="EchartsBox" id="mediaType"></div>
+					</div>
+					<div class="charts2Right">
+						<div class="LeftTitle">媒体来源排行</div>
+						<div class="titleSelect">
+							<ul class="chankbox">
+								<li><label class="checklable unchecked check-all"><input type="checkbox" class="checkbox"/></label>24小时</li>
+								<li><label class="checklable unchecked"><input type="checkbox" class="checkbox"/></label>一周</li>
+								<li><label class="checklable checked"><input type="checkbox" class="checkbox"/></label>一个月</li>
+								<li><input type="text" class="p_myDatePicker" placeholder="开始时间" id="RankDPstart" onclick="WdatePicker({el:'RankDPstart',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+								<li>-</li>
+								<li><input type="text" class="p_myDatePicker" placeholder="结束时间" id="RankDPend" onclick="WdatePicker({el:'RankDPend',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+							</ul>
+						</div>
+						<div class="mnWrap">
+							<div class="mnSel">
+								<p>全部媒体类型</p>
+								<i></i>
+								<ul>
+									<li>微信公众号</li>
+									<li>中国青年网</li>
+									<li>中国藏族网</li>
+									<li>网易</li>
+								</ul>
+							</div>
+							<button class="download fr"><i class="iconfont icon-iconfont0071"></i></button>
+						</div>
+						<div class="EchartsBox" id="mediaRank"></div>
+					</div>
+				</div>
+				
+				<div class="charts3">
+					<div class="LeftTitle">情感走势</div>
+					<button class="download fr"><i class="iconfont icon-iconfont0071"></i></button>
+					<div class="titleSelect">
+						<div class="mnWrap charts3Mnsel">
+							<div class="mnSel">
+								<p>全部媒体类型</p>
+								<i></i>
+								<ul>
+									<li>新闻</li>
+									<li>论坛</li>
+									<li>博客</li>
+									<li>视频</li>
+									<li>微博</li>
+									<li>贴吧</li>
+								</ul>
+							</div>							
+						</div>						
+						<ul class="chankbox charts3UL">
+							<li><label class="checklable unchecked check-all"><input type="checkbox" class="checkbox"/></label>24小时</li>
+							<li><label class="checklable unchecked"><input type="checkbox" class="checkbox"/></label>一周</li>
+							<li><label class="checklable checked"><input type="checkbox" class="checkbox"/></label>一个月</li>
+							<li><input type="text" class="p_myDatePicker" placeholder="开始时间" id="emotionDPstart" onclick="WdatePicker({el:'emotionDPstart',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+							<li>-</li>
+							<li><input type="text" class="p_myDatePicker" placeholder="结束时间" id="emotionDPend" onclick="WdatePicker({el:'emotionDPend',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+						</ul>
+					</div>
+					<div class="EchartsBox" id="emotionEcharts"></div>
+				</div>	
+				
+				<div class="charts4">
+					<div class="charts4Left">
+						<div class="LeftTitle">情感分布</div>
+						<button class="download fr"><i class="iconfont icon-iconfont0071"></i></button>
+						<div class="titleSelect">
+							<ul class="chankbox">
+								<li><label class="checklable unchecked check-all"><input type="checkbox" class="checkbox"/></label>24小时</li>
+								<li><label class="checklable unchecked"><input type="checkbox" class="checkbox"/></label>一周</li>
+								<li><label class="checklable checked"><input type="checkbox" class="checkbox"/></label>一个月</li>
+								<li><input type="text" class="p_myDatePicker" placeholder="开始时间" id="SpreadDPstart" onclick="WdatePicker({el:'SpreadDPstart',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+								<li>-</li>
+								<li><input type="text" class="p_myDatePicker" placeholder="结束时间" id="SpreadDPend" onclick="WdatePicker({el:'SpreadDPend',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+							</ul>
+						</div>
+						<div class="EchartsBox" id="emotionSpread"></div>
+					</div>
+					<div class="charts4Right">
+						<div class="LeftTitle">负面信息来源媒体</div>
+						<div class="titleSelect">
+							<ul class="chankbox">
+								<li><label class="checklable unchecked check-all"><input type="checkbox" class="checkbox"/></label>24小时</li>
+								<li><label class="checklable unchecked"><input type="checkbox" class="checkbox"/></label>一周</li>
+								<li><label class="checklable checked"><input type="checkbox" class="checkbox"/></label>一个月</li>
+								<li><input type="text" class="p_myDatePicker" placeholder="开始时间" id="downsideDPstart" onclick="WdatePicker({el:'downsideDPstart',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+								<li>-</li>
+								<li><input type="text" class="p_myDatePicker" placeholder="结束时间" id="downsideDPend" onclick="WdatePicker({el:'downsideDPend',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+							</ul>
+						</div>
+						
+						<div class="mnWrap">
+							<div class="mnSel">
+								<p>全部媒体类型</p>
+								<i></i>
+								<ul>
+									<li>ZAkER</li>
+									<li>微信公众号</li>
+									<li>新浪网</li>
+								</ul>
+							</div>
+							<button class="download fr"><i class="iconfont icon-iconfont0071"></i></button>
+						</div>						
+						<div class="EchartsBox" id="downsideMedia"></div>
+					</div>
+				</div>	
+				
+				<div class="eventSpread">
+					<div class="LeftTitle">事件走势</div>
+					<div class="eventDiv">
+						<div class="evenTime">2017-02-12</div>
+						<div class="eventLeft">
+							<div class="eventListL">
+								<span class="intF">[新浪网]</span> 乔装快递员维修工蹲点跨省到会电信诈骗团伙 ...<span class="intR">相似文章：50</span>
+							</div>
+							<div class="eventListL">
+								<span class="intF">[新浪网]</span> 乔装快递员维修工蹲点跨省到会电信诈骗团伙 ...<span class="intR">相似文章：50</span>
+							</div>
+							<div class="eventListL">
+								<span class="intF">[新浪网]</span> 乔装快递员维修工蹲点跨省到会电信诈骗团伙 ...<span class="intR">相似文章：50</span>
+							</div>
+							<div class="eventListL">
+								<span class="intF">[新浪网]</span> 乔装快递员维修工蹲点跨省到会电信诈骗团伙 ...<span class="intR">相似文章：50</span>
+							</div>
+							<div class="eventListL">
+								<span class="intF">[新浪网]</span> 乔装快递员维修工蹲点跨省到会电信诈骗团伙 ...<span class="intR">相似文章：50</span>
+							</div>
+						</div>
+						<div class="eventMid"></div>
+						<div class="eventRight">
+							<div class="eventListR fl">
+								<span class="intF">[新浪网]</span> 乔装快递员维修工蹲点跨省到会电信诈骗团伙 ...<span class="intR">相似文章：50</span>								
+							</div>
+							<div class="eventListR fl">
+								<span class="intF">[新浪网]</span> 乔装快递员维修工蹲点跨省到会电信诈骗团伙 ...<span class="intR">相似文章：50</span>								
+							</div>
+							<div class="eventListR fl">
+								<span class="intF">[新浪网]</span> 乔装快递员维修工蹲点跨省到会电信诈骗团伙 ...<span class="intR">相似文章：50</span>								
+							</div>
+							<div class="eventListR fl">
+								<span class="intF">[新浪网]</span> 乔装快递员维修工蹲点跨省到会电信诈骗团伙 ...<span class="intR">相似文章：50</span>								
+							</div>
+							<div class="eventListR fl">
+								<span class="intF">[新浪网]</span> 乔装快递员维修工蹲点跨省到会电信诈骗团伙 ...<span class="intR">相似文章：50</span>								
+							</div>
+							
+						</div>
+					</div>
+				</div>	
+				<div class="charts5">
+					<div class="charts5Left">
+						<div class="LeftTitle">舆情相关词</div>
+						<button class="download fr"><i class="iconfont icon-iconfont0071"></i></button>
+						<div class="titleSelect">
+							<ul class="chankbox">
+								<li><label class="checklable unchecked check-all"><input type="checkbox" class="checkbox"/></label>24小时</li>
+								<li><label class="checklable unchecked"><input type="checkbox" class="checkbox"/></label>一周</li>
+								<li><label class="checklable checked"><input type="checkbox" class="checkbox"/></label>一个月</li>
+								<li><input type="text" class="p_myDatePicker"  placeholder="开始时间" id="WordsDPstart" onclick="WdatePicker({el:'WordsDPstart',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+								<li>-</li>
+								<li><input type="text" class="p_myDatePicker"  placeholder="结束时间" id="WordsDPend" onclick="WdatePicker({el:'WordsDPend',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+							</ul>
+						</div>
+						<div class="EchartsBox" id="sentimentWords"></div>
+					</div>
+					<div class="charts5Right">
+						<div class="LeftTitle">传播者路径分析</div>
+						<div class="titleSelect">
+							<ul class="chankbox">
+								<li><label class="checklable unchecked check-all"><input type="checkbox" class="checkbox"/></label>24小时</li>
+								<li><label class="checklable unchecked"><input type="checkbox" class="checkbox"/></label>一周</li>
+								<li><label class="checklable checked"><input type="checkbox" class="checkbox"/></label>一个月</li>
+								<li><input type="text" class="p_myDatePicker" placeholder="开始时间" id="PathDPstart" onclick="WdatePicker({el:'PathDPstart',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+								<li>-</li>
+								<li><input type="text" class="p_myDatePicker" placeholder="结束时间" id="PathDPend" onclick="WdatePicker({el:'PathDPend',highLineWeekDay:false,dateFmt:'yyyy-MM-dd',qsEnabled:false,autoShowQS:false,isShowClear:false,isShowToday:false})"/></li>
+							</ul>
+						</div>
+						<div class="mnWrap">
+							<div class="mnSel">
+								<p>全部媒体类型</p>
+								<i></i>
+								<ul>
+									<li>法制日报</li>
+									<li>中国新闻网</li>
+									<li>新华网</li>
+								</ul>
+							</div>
+							<button class="download fr"><i class="iconfont icon-iconfont0071"></i></button>
+						</div>						
+						<div class="EchartsBox" id="diffusePath">
+							<iframe src="relationIfream.html" scrolling="no" width="720" height="355" frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 图片背景 -->
+		<div class="body-bg">
+		    <img src="../images/bg_body.jpg">
+		</div>		
+	</body>
+	<script src="../Lib/jquery-1.12.4.min.js"></script>
+	<script src="../Lib/public.js"></script>
+	<script src="../Lib/Echarts/echarts.common.min.js"></script>
+	<script src="../js/IndexEcharts.js"></script>
+	<script src="../Lib/DatePicker/WdatePicker.js"></script>
+</html>
